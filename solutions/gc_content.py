@@ -18,9 +18,3 @@ def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)): # type: ignore
     for k in gc_dict.keys():
         if gc_dict[k] == max_gc:
             return (k, gc_dict[k])
-
-
-if __name__ == "__main__":
-    path = ""               # insert path
-    dna_dict = parse_fasta(path)
-    print(gc_content(dna_dict))
