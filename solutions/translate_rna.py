@@ -1,0 +1,1 @@
+# translate rna into protein
