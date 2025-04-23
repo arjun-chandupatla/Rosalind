@@ -15,8 +15,3 @@ def parse_fasta(path):
             d[id] = """"""
         else:
             d[id] += line
-
-
-if __name__ == "__main__":
-    path = ""   # insert path
-    print(parse_fasta(path))
