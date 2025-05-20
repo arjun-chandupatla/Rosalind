@@ -1,9 +1,3 @@
-# find GC-content of a DNA string
-# DNA provided in FASTA format
-# uses parse_fasta.py
-
-from parse_fasta import *
-
 def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)): # type: ignore
     gc_dict = dict()
     for k in dna_dict.keys():
