@@ -1,3 +1,3 @@
 # rosalind
-Solutions to some problems on Rosalind.info (Bioinformatics Stronghold)
-Filenames are the abbreviations found in tree view
+Solutions to some problems on Rosalind  
+See <a href="rosalind.info">rosalind.info</a> for more information
