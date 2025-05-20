@@ -10,8 +10,3 @@ def reverse_complement(path: str) -> str:
             case "C": rc += "G"
             case "G": rc += "C"
     return rc[::-1]
-
-
-if __name__ == "__main__":
-    path = ""   # insert path
-    print(reverse_complement(path))
