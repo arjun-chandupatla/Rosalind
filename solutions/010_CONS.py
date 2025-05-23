@@ -1,8 +1,10 @@
 # Create a consensus strand and a profile matrix
 # for a set of DNA strands provided
 
+from numpy import transpose
+
 # Create the profile matrix
-def count(motifs):
+def profile(motifs):
     tMotifs = []
     for column in transpose(motifs):
         tMotifs.append(list(column))
@@ -25,10 +27,10 @@ def count(motifs):
 
 
 # Create the consensus strand from the profile matrix
-def consensus(count_arr):
+def consensus(profile_arr):
     cons = ""
-    c_arr = transpose(count_arr)
-    for i in c_arr:
+    prof = transpose(profile_arr)
+    for i in prof:
         m = list(i).index(max(i))
         match m:
             case 0:
@@ -43,7 +45,7 @@ def consensus(count_arr):
 
 
 # Format the consensus string and profile array for rosalind's autograder
-def formatOutput(cons: str, count_arr: list[list[int]]) -> str:
+def formatOutput(cons: str, prof: list[list[int]]) -> str:
     s = ""
     s += cons
     nuc = "ACGT"
@@ -51,14 +53,14 @@ def formatOutput(cons: str, count_arr: list[list[int]]) -> str:
         temp = []
         s += "\n"
         s += nuc[r] + ": "
-        for i in count_arr[r]:
+        for i in prof[r]:
             temp.append(str(i))
         s += " ".join(temp)
     return s
 
 
 # Turn the input (a text file in FASTA format) into a list of DNA strands
-# that count() can use
+# that profile() can use
 def parseInput(file):
     d = list()
     temp = ""
