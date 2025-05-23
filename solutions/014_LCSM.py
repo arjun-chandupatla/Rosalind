@@ -38,3 +38,8 @@ def findMotifs(dna_arr: list[str]) -> list[str]:
                 if new_motifs[i] not in d:
                     del new_motifs[i]
     return motifs
+
+
+def formatOutput(motifs: list[str]) -> str:
+    s = motifs[0]
+    return s
