@@ -20,6 +20,11 @@ def parseInput(file) -> list[str]:
     return dna
 
 
+def expand(dna: str):
+    for base in "ATCG":
+        yield dna + base
+
+
 def findMotifs(dna_arr: list[str]) -> list[str]:
     motifs = []
     new_motifs = [""]
