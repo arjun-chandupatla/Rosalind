@@ -55,3 +55,24 @@ def formatOutput(cons: str, count_arr: list[list[int]]) -> str:
             temp.append(str(i))
         s += " ".join(temp)
     return s
+
+
+# Turn the input (a text file in FASTA format) into a list of DNA strands
+# that count() can use
+def parseInput(file):
+    d = list()
+    temp = ""
+    for line_s in file:
+        line = line_s.strip()
+        if line.isspace():
+            continue
+        elif line.startswith(">"):
+            if len(temp) == 0:
+                pass
+            else:
+                d.append(temp)
+                temp = ""
+        else:
+            temp += line.strip()
+    d.append(temp)
+    return d
