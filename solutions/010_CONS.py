@@ -40,3 +40,18 @@ def consensus(count_arr):
             case 3:
                 cons += "T"
     return cons
+
+
+# Format the consensus string and profile array for rosalind's autograder
+def formatOutput(cons: str, count_arr: list[list[int]]) -> str:
+    s = ""
+    s += cons
+    nuc = "ACGT"
+    for r in range(4):
+        temp = []
+        s += "\n"
+        s += nuc[r] + ": "
+        for i in count_arr[r]:
+            temp.append(str(i))
+        s += " ".join(temp)
+    return s
