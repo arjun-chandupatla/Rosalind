@@ -22,3 +22,21 @@ def count(motifs):
             elif r[i] == "T":
                 T[i] += 1
     return [A, C, G, T]
+
+
+# Create the consensus strand from the profile matrix
+def consensus(count_arr):
+    cons = ""
+    c_arr = transpose(count_arr)
+    for i in c_arr:
+        m = list(i).index(max(i))
+        match m:
+            case 0:
+                cons += "A"
+            case 1:
+                cons += "C"
+            case 2:
+                cons += "G"
+            case 3:
+                cons += "T"
+    return cons
