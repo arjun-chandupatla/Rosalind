@@ -18,3 +18,18 @@ def parseInput(file) -> list[str]:
             temp += line.strip()
     dna.append(temp)
     return dna
+
+
+def findMotifs(dna_arr: list[str]) -> list[str]:
+    motifs = []
+    new_motifs = [""]
+    while len(new_motifs) != 0:
+        motifs = new_motifs
+        new_motifs = []
+        for m in motifs:		# regenerate new_motifs
+            new_motifs += list(expand(m))
+        for d in dna_arr:
+            for i in range(len(new_motifs) - 1, -1, -1):
+                if new_motifs[i] not in d:
+                    del new_motifs[i]
+    return motifs
