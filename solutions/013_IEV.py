@@ -24,8 +24,9 @@ def getOffspring(n_arr: list[int]) -> float:
     return num_dominant
 
 
-def formatOutput(avg):
-    return str(avg)
+# "Stringify" the float
+def formatOutput(num):
+    return str(num)
 
 
 def parseInput(file):
