@@ -21,6 +21,7 @@ gen_code = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
 
 
+# All the possible proteins in one reading frame
 def translateOpenReadingFrame(dna: str):
     global gen_code
     k = 3
