@@ -16,3 +16,7 @@ def getOffspring(n_arr: list[int]) -> float:
                 pass
     num_dominant = sum(offspring_arr)
     return num_dominant
+
+
+def formatOutput(avg):
+    return str(avg)
