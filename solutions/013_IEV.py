@@ -20,3 +20,9 @@ def getOffspring(n_arr: list[int]) -> float:
 
 def formatOutput(avg):
     return str(avg)
+
+
+def parseInput(file):
+    text = file.read()
+    couple_arr = list(map(int, text.split()))
+    return couple_arr
