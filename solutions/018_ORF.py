@@ -79,3 +79,17 @@ def formatOutput(proteins):
     for p in list(set(proteins)):
         s += p + "\n"
     return s
+
+
+if __name__ == "__main__":
+    input_file = open("rosalind_orf.txt", "r")
+    dna = parseInput(input_file)
+    input_file.close()
+
+    rc = reverseComplement(dna)
+    proteins = translateOpenReadingFrame(dna) + translateOpenReadingframe(rc)
+    answer = formatOutput(proteins)
+
+    output_file = open("output.txt", "w")
+    output_file.write(answer)
+    output_file.close()
