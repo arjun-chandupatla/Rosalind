@@ -29,6 +29,7 @@ def formatOutput(num):
     return str(num)
 
 
+# Read the input given by Rosalind
 def parseInput(file):
     text = file.read()
     couple_arr = list(map(int, text.split()))
