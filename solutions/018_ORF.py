@@ -45,6 +45,7 @@ def translateOpenReadingFrame(dna: str):
     return proteins
 
 
+# Finds the complementary strand
 def reverseComplement(dna: str):
     rc = ""
     for base in dna:
