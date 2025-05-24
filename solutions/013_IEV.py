@@ -1,9 +1,15 @@
+# Calculate the expected number of offspring with a dominant phenotype
+# given six integers that indicate how many couples have each possible 
+# genotype for a certain factor. 
+
+# Calculate the average number of offspring with a dominant phenotype
 def getOffspring(n_arr: list[int]) -> float:
     offspring_arr = []
     for i in range(6):
         k = i+1
         n = n_arr[i]
         match k:
+        # cases taken from drawing Punnett squares
             case 1 | 2 | 3:
                 offspring_arr.append(float(n*2))
             case 4:
