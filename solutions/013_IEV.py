@@ -18,7 +18,7 @@ def getOffspring(n_arr: list[int]) -> float:
                 offspring_arr.append(float(n))
             case 6:
                 offspring_arr.append(float(0))
-            case _:
+            case _:        # theoretically unreachable state
                 pass
     num_dominant = sum(offspring_arr)
     return num_dominant
