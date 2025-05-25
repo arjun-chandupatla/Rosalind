@@ -30,3 +30,25 @@ def findRestrictionSites(dna: str) -> dict[int, list[int]]:
     for k in site_arr.keys():
         site_arr[k].sort()
     return site_arr
+
+
+def parseInput(file) -> str:
+    dna = ""
+    for line_s in file:
+        line = line_s.strip()
+        if line.startswith(">"):
+            pass
+        else:
+            dna += line
+    return dna
+
+
+def formatOutput(sites: dict[int, list[int]]) -> str:
+    s = ""
+    site_k = list(sites.keys())
+    site_k.sort()
+    for k in site_k:
+        for v in sites[k]:
+            s += str(k) + " " + str(v) + "\n"
+
+    return s
