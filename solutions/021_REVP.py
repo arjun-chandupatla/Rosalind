@@ -1,6 +1,6 @@
-# Find restriction sites in a strand of DNA. Restriction
-# sites are typically reverse palindromes, meaning that
-# they are the same as their reverse complement.
+# Find restriction sites in a strand of DNA. Restriction sites are 
+# typically reverse palindromes, meaning that they are the same as 
+# their reverse complement.
 
 
 def reverseComplement(dna: str) -> str:
@@ -17,7 +17,9 @@ def reverseComplement(dna: str) -> str:
                 rc += "A"
     return rc[::-1]
 
-
+# Uses dict[int, list[int]] in order to account for the possibility
+# of multiple restriction sites of different lengths starting 
+# from the same index
 def findRestrictionSites(dna: str) -> dict[int, list[int]]:
     site_arr = dict()
     for n in range(4, 13, 2):
