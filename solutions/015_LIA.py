@@ -1,3 +1,4 @@
+# Factorial
 def f(x: int) -> int:
     fact = 1
     for i in list(range(1, x+1)):
