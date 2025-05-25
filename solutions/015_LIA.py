@@ -16,6 +16,7 @@ def getProbOffspring(k: int, N: int) -> float:
     return prob
 
 
+# Return a tuple (k, n)
 def parseInput(file):
     k, n = map(int, file.read().split())
     return (k, n)
