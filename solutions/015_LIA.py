@@ -1,5 +1,3 @@
-
-
 def f(x: int) -> int:
     prod = 1
     for i in list(range(1, x+1)):
@@ -13,7 +11,6 @@ def getProbOffspring(k: int, N: int) -> float:
     for i in range(N, P+1):
         prob += ( f(P) / (f(i) * f(P-i)) ) * (0.25)**i * (0.75)**(P-i)
     return prob
-
 
 
 def parseInput(file):
