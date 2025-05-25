@@ -1,10 +1,12 @@
 def f(x: int) -> int:
-    prod = 1
+    fact = 1
     for i in list(range(1, x+1)):
-        prod *= i
-    return prod
+        fact *= i
+    return fact
 
 
+# Probability of >= N individuals in kth generation being AaBb is
+# Sum from i=N to 2^k of 2^k choose i times
 def getProbOffspring(k: int, N: int) -> float:
     prob = 0.0
     P = 2**k
