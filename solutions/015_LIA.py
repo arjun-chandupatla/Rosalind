@@ -18,3 +18,9 @@ def getProbOffspring(k: int, N: int) -> float:
 
         prob += ( f(P) / (f(i) * f(P-i)) ) * (0.25)**i * (0.75)**(P-i)
     return prob
+
+
+
+def parseInput(file):
+    k, n = map(int, file.read().split())
+    return (k, n)
