@@ -6,6 +6,12 @@ def getPerms(n: int):
     return (len(l), l)
 
 
+# Presents output in format:
+# len
+# perm 1
+# perm 2
+# ...
+# perm n
 def formatOutput(l: int, p: list[tuple]) -> str:
     s = str(l)
     for i in p:
