@@ -25,6 +25,8 @@ def translate(rna: str) -> str:
         protein += gen_code[codon]
 
 
+# Not the same as transcription
+# RNA strand is not complementary
 def dnaToRna(dna: str) -> str:
     return dna.replace("T", "U")
 
