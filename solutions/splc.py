@@ -23,3 +23,6 @@ def translate(rna: str) -> str:
         if gen_code[codon] == "STOP":
             return protein
         protein += gen_code[codon]
+
+def transcribe(dna: str) -> str:
+    return dna.replace("T", "U")
