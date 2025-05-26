@@ -1,4 +1,3 @@
-
 def translate(rna: str) -> str:
     gen_code = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
     "UCU":"S", "UCC":"S", "UCA":"S", "UCG":"S",
@@ -24,7 +23,7 @@ def translate(rna: str) -> str:
         protein += gen_code[codon]
 
 
-def transcribe(dna: str) -> str:
+def dnaToRna(dna: str) -> str:
     return dna.replace("T", "U")
 
 
