@@ -11,7 +11,7 @@ def getPerms(n: int):
 # perm 1
 # perm 2
 # ...
-# perm n
+# perm n!
 def formatOutput(l: int, p: list[tuple]) -> str:
     s = str(l)
     for i in p:
