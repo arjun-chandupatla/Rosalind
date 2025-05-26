@@ -31,6 +31,8 @@ def dnaToRna(dna: str) -> str:
     return dna.replace("T", "U")
 
 
+# Returns the coding regions of DNA
+# Effectively splices introns out
 def splice(dna, introns) -> str:
     splc_dna = dna
     for intron in introns:
