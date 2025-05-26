@@ -1,3 +1,5 @@
+# Translates a strand of RNA
+# Does not necessarily start at start codon here
 def translate(rna: str) -> str:
     gen_code = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
     "UCU":"S", "UCC":"S", "UCA":"S", "UCG":"S",
