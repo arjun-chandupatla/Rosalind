@@ -1,6 +1,7 @@
 from itertools import permutations
 
 
+# Uses itertools.permutations() to generate permutations
 def getPerms(n: int):
     l = list(permutations(range(1, n+1)))
     return (len(l), l)
