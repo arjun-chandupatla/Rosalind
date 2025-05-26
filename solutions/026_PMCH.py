@@ -1,3 +1,5 @@
+from math import factorial as f
+
 def perfectMatchings(rna: str) -> int:
     au = 0
     gc = 0
