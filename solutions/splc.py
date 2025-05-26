@@ -16,7 +16,6 @@ def translate(rna: str) -> str:
     "GCU":"A", "GCC":"A", "GCA":"A", "GCG":"A",
     "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
-    
     protein = ""
     for i in range(0, len(rna), 3):
         codon = rna[i:i+3]
@@ -24,5 +23,17 @@ def translate(rna: str) -> str:
             return protein
         protein += gen_code[codon]
 
+
 def transcribe(dna: str) -> str:
     return dna.replace("T", "U")
+
+
+def splice(dna, introns) -> str:
+    splc_dna = dna
+    for intron in introns:
+        i = splc_dna.index(intron)
+        l = len(intron)
+        if splc_dna[i:i+l+1] == intron:
+            raise IndexError("intron not same as splc_dna, index error")
+        splc_dna = splc_dna[:i] + splc_dna[i+l:]
+    return splc_dna
