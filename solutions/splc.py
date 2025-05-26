@@ -23,4 +23,3 @@ def translate(rna: str) -> str:
         if gen_code[codon] == "STOP":
             return protein
         protein += gen_code[codon]
-    raise Exception("translation error, stop codon not found")
