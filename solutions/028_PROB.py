@@ -2,7 +2,7 @@
 # a DNA sequence given its GC content
 # Takes the log base 10 of each probability, so higher numbers (less negative) mean
 # a higher probability
-
+import math
 
 def probRandomString(s: str, gc_arr: list[float]):
     for gc in gc_arr:
