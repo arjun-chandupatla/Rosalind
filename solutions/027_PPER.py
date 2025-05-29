@@ -8,6 +8,6 @@ def partialPerms(n: int, k: int) -> int:
         num *= i
         if num > 1000000:
             num %= 1000000
-        elif num == 1000000:
-            return 0
+        elif num == 1000000:        # If the modulus at one step is 0,
+            return 0                # the answer is also 0
     return num
