@@ -6,8 +6,8 @@ from math import log10
 
 def probRandomString(s: str, gc_arr: list[float]):
     for gc in gc_arr:
-        g = gc/2
-        a = (1-gc)/2
+        g = gc/2         # Probability of G or C
+        a = (1-gc)/2     # Probability of A or T
         prob = 1.0
         for base in s:
             match base:
