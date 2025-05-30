@@ -1,5 +1,4 @@
-# Create a consensus strand and a profile matrix
-# for a set of DNA strands provided
+# Create a consensus strand and a profile matrix for a set of DNA strands provided
 
 from numpy import transpose
 
