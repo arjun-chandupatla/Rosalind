@@ -10,8 +10,3 @@ def count(path: str) -> tuple((str, str, str, str)): # type: ignore
             case "G": G += 1
             case "T": T += 1
     return (A, C, G, T)
-
-
-if __name__ == "__main__":
-    path = ""   # insert path
-    print(count(path))
