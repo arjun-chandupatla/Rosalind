@@ -4,16 +4,16 @@ from numpy import transpose
 
 # Create the profile matrix
 def profile(motifs):
-    tMotifs = []
+    t_motifs = []
     for column in transpose(motifs):
-        tMotifs.append(list(column))
-    k = len(tMotifs[0])
+        t_motifs.append(list(column))
+    k = len(t_motifs[0])
     A = [0] * k
     C = [0] * k
     G = [0] * k
     T = [0] * k
     for i in range(k):
-        for r in tMotifs:
+        for r in t_motifs:
             if r[i] == "A":
                 A[i] += 1
             elif r[i] == "C":
