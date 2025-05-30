@@ -1,6 +1,6 @@
-# return the "difference" in two strings
-# difference is measured by number of mismatches
-# counts point mutations
+# Return the "difference" in two strings
+# Difference is measured by number of mismatches
+# Counts point mutations
 
 def hamming_distance(p: str, q: str) -> int:
     dist = 0
