@@ -1,4 +1,5 @@
-# translate rna into protein
+# Translate a strand of RNA into a protein
+# Ignores splicing
 
 def translate(rna: str):
     genCode = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
@@ -17,8 +18,8 @@ def translate(rna: str):
     "GCU":"A", "GCC":"A", "GCA":"A", "GCG":"A",
     "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
+    
     peptide = ""
-
     for i in range(0, len(rna), 3):
         nextAminoAcid = genCode[rna2[i:i+3]]
         if nextAminoAcid == "STOP":
