@@ -9,7 +9,7 @@ def getOffspring(n_arr: list[int]) -> float:
         k = i+1
         n = n_arr[i]
         match k:
-        # cases taken from drawing Punnett squares
+        # Cases taken from drawing Punnett squares
             case 1 | 2 | 3:
                 offspring_arr.append(float(n*2))
             case 4:
