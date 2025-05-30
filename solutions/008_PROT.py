@@ -1,5 +1,6 @@
 # Translate a strand of RNA into a protein
-# Ignores splicing
+# Ignores splicing and open reading frames, 
+# also doesn't necessarily start at the start codon
 
 def translate(rna: str):
     genCode = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
