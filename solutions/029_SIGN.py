@@ -4,7 +4,6 @@
 
 from itertools import permutations, product
 
-
 def getPerms(n: int):
     alph = list(range(1, n+1))
     l = len(alph)
@@ -19,11 +18,7 @@ def getPerms(n: int):
         if len(temp) != len(set(temp)):
             del perms[j]
         
-
     return perms
-
-
-
 
 
 def formatOutput(perms: list) -> str:
