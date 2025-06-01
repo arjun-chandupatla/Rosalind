@@ -21,3 +21,17 @@ def getPerms(n: int):
         
 
     return perms
+
+
+
+
+
+def formatOutput(perms: list) -> str:
+    s = str(len(perms))
+    for p in perms:
+        s += "\n"
+        temp = ""
+        for q in p:
+            temp += str(q) + " "
+        s += temp.strip()
+    return s
