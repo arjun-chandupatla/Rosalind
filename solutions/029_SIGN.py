@@ -3,8 +3,8 @@
 # a positive or a negative sign
 
 from itertools import permutations
-
-def getPerms(n: int):    # Generates and returns list of signed permutations
+# Generates and returns list of signed permutations
+def getPerms(n: int):
     alph = list(range(1, n+1))
     l = len(alph)
     for i in range(l):
@@ -20,8 +20,8 @@ def getPerms(n: int):    # Generates and returns list of signed permutations
         
     return perms
 
-
-def formatOutput(perms: list) -> str:    # Formats the output for the rosalind autograder
+# Formats the output for the rosalind autograder
+def formatOutput(perms: list) -> str:
     s = str(len(perms))
     for p in perms:
         s += "\n"
