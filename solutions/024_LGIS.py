@@ -1,4 +1,4 @@
-# Find longest increasing subsequence (LIS)
+# Find longest increasing subsequence (LIS) and longest decreasing subsequence
 
 def subsequence(p: list) -> list[int]:
     l = [1] * len(p)
