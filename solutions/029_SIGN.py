@@ -2,9 +2,9 @@
 # A signed permutation is a permutation, but every number is prefaced with either 
 # a positive or a negative sign
 
-from itertools import permutations, product
+from itertools import permutations
 
-def getPerms(n: int):
+def getPerms(n: int):    # Generates and returns list of signed permutations
     alph = list(range(1, n+1))
     l = len(alph)
     for i in range(l):
@@ -21,7 +21,7 @@ def getPerms(n: int):
     return perms
 
 
-def formatOutput(perms: list) -> str:
+def formatOutput(perms: list) -> str:    # Formats the output for the rosalind autograder
     s = str(len(perms))
     for p in perms:
         s += "\n"
