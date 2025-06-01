@@ -2,6 +2,8 @@
 # A signed permutation is a permutation, but every number is prefaced with either 
 # a positive or a negative sign
 
+from itertools import permutations, product
+
 
 def getPerms(n: int):
     alph = list(range(1, n+1))
