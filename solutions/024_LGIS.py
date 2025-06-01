@@ -7,11 +7,11 @@ def subsequence(p: list) -> list[int]:
             if p[i] < p[j]:
                 l[j] = max(l[j], l[i] + 1)
     # l now holds the length of LIS at each index
-    ssq_arr = []
+    lis = []
     max_len = max(l)    # LIS length
     # Iterates backwards so that only the elements of LIS are added
     for i in range(len(p) - 1, -1, -1):
         if max_len == l[i]:
-            ssq_arr.append(p[i])
+            lis.append(p[i])
             max_len -= 1
-    return ssq_arr[::-1]        # lis is backwards, so lis[::-1] reverses it
+    return lis[::-1]        # lis is backwards, so lis[::-1] reverses it
