@@ -14,4 +14,4 @@ def subsequence(p: list) -> list[int]:
         if max_len == l[i]:
             ssq_arr.append(p[i])
             max_len -= 1
-    return ssq_arr[::-1]
+    return ssq_arr[::-1]        # lis is backwards, so lis[::-1] reverses it
