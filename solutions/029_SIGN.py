@@ -3,6 +3,7 @@
 # a positive or a negative sign
 
 from itertools import permutations
+
 # Generates and returns list of signed permutations
 def getPerms(n: int):
     alph = list(range(1, n+1))
@@ -19,6 +20,7 @@ def getPerms(n: int):
             del perms[j]
         
     return perms
+
 
 # Formats the output for the rosalind autograder
 def formatOutput(perms: list) -> str:
