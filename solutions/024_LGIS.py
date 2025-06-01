@@ -1,8 +1,8 @@
-# Find longest increasing subsequence
+# Find longest increasing subsequence (LIS)
 
 def subsequence(p: list) -> list[int]:
     l = [1] * len(p)
-    for i in range(len(p)):
+    for i in range(len(p)):        # Finds the length of LIS
         for j in range(i+1, len(p)):
             if p[i] < p[j]:
                 l[j] = max(l[j], l[i] + 1)
