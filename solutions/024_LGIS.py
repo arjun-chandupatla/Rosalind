@@ -9,7 +9,8 @@ def subsequence(p: list) -> list[int]:
     # l now holds the length of LIS at each index
     ssq_arr = []
     max_len = max(l)    # LIS length
-    for i in range(len(p) - 1, -1, -1):    # Iterates backwards
+    # Iterates backwards so that only the elements of LIS are added
+    for i in range(len(p) - 1, -1, -1):
         if max_len == l[i]:
             ssq_arr.append(p[i])
             max_len -= 1
