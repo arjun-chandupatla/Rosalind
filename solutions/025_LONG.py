@@ -48,3 +48,17 @@ def superstring(dna_arr: list[str]):
         overlap_ = overlap(super, dna_arr[i])
         super += dna_arr[i][overlap_:]
     return super
+
+
+def parseInput(file):
+    temp = ""
+    dna_arr = []
+    for line_s in file:
+        line = line_s.strip()
+        if line.startswith(">"):
+            dna_arr.append(temp)
+            temp = ""
+        else:
+            temp += line
+    dna_arr.append(temp)
+    return dna_arr[1:]
