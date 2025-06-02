@@ -6,7 +6,7 @@ num_pep = {"F":2, "L":6, "S":6, "Y":2, "C":2, "W":1,
            "T":4, "N":2, "K":2, "V":4, "A":4, "D":2, 
            "G":4, "E":2}
 
-def numMrna(pep: str) -> int:
+def numMRNA(pep: str) -> int:
     global num_pep
     num = 1
     for aa in pep:
@@ -18,5 +18,5 @@ def numMrna(pep: str) -> int:
                 num %= 1000000
                 if num == 0:
                     return 0
-    num *= 3        # stop codon
+    num *= 3        # 3 different stop codon possibilities
     return num % 1000000
