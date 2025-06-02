@@ -39,3 +39,10 @@ def getOrder(dna: list[str]):
         l.append(order[l[-1]])
 
     return l
+
+def superstring(dna_arr: list[str]):
+    super = dna_arr[0]
+    for i in range(1, len(dna_arr)):
+        overlap_ = overlap(super, dna_arr[i])
+        super += dna_arr[i][overlap_:]
+    return super
