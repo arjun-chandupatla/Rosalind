@@ -1,10 +1,4 @@
-# Factorial
-def f(x: int) -> int:
-    fact = 1
-    for i in list(range(1, x+1)):
-        fact *= i
-    return fact
-
+from math import factorial as f
 
 # Probability of >= N individuals in kth generation being AaBb is
 # Sum from i=N to 2^k of 2^k choose i times
