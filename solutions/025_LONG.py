@@ -40,6 +40,8 @@ def getOrder(dna: list[str]):
 
     return l
 
+
+# Creates the superstring given a list of strings in order
 def superstring(dna_arr: list[str]):
     super = dna_arr[0]
     for i in range(1, len(dna_arr)):
