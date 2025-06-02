@@ -14,8 +14,9 @@ def overlap(s: str, t: str) -> int:
     return o
 
 
+# Finds and returns the order in which the strings should be joined
 def getOrder(dna: list[str]):
-    order = dict()
+    order = dict()      # order is a directed graph
     for i in range(len(dna)):
         d1 = dna[i]
         overlap_arr = [0] * len(dna)
@@ -26,12 +27,14 @@ def getOrder(dna: list[str]):
         idx = overlap_arr.index(max(overlap_arr))
         order[d1] = dna[idx]
     
+    # Finds the only path (l) in a directed graph (order)
     l = []
     for k in order.keys():
-        if k not in order.values():
+        if k not in order.values():     # Finds the node with indegree 0
             l = [k]
             break
-
+    # If there are n strings in dna, then the number of edges is (n-1)
+    # so l is grown (n-1) times
     for _ in range(1, len(dna)):
         l.append(order[l[-1]])
 
