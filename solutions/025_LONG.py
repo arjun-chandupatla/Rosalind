@@ -1,6 +1,5 @@
-# Simple attempt at chromosome reconstruction
-# Provides a set of DNA strands, and assumes that the chromosome
-# is the shortest superstring of the DNA set
+# Reconstruct a chromosome by assuming parsimony
+# Essentially finds the shortest superstring given a set of strings
 
 
 # Finds the length of overlap between two strings
