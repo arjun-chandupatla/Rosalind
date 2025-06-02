@@ -1,6 +1,4 @@
-# Given a peptide, return the number of 
-# possible mRNA strands that could encode
-# that peptide modulo 1,000,000
+# Given a peptide, return the number of possible mRNA strands that could encode that peptide modulo 1,000,000
 
 # Number of codons per peptide
 num_pep = {"F":2, "L":6, "S":6, "Y":2, "C":2, "W":1, 
