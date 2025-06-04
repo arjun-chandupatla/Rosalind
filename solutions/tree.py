@@ -33,11 +33,11 @@ def func(n, edge_list: list[list[int]]) -> int:
         if test == 1:
             l.append([e1, e2])
         if len(idx) > 1:
-            id0 = idx[0]
+            id_0 = idx[0]
             for k in range(len(idx) - 1, 0, -1):
-                idk = idx[k]
-                l[id0] += l[idk]
-                del l[idk]
+                id_k = idx[k]
+                l[id_0] += l[id_k]
+                del l[id_k]
 
     num += len(l) - 1
 
@@ -48,8 +48,9 @@ def parseInput(file):
     lines = file.readlines()
     n = int(lines[0].strip())
     l = list()
-    temp = []
+    
     for i in range(1, len(lines)):
         line = lines[i].strip()
         l.append([int(j) for j in line.split()])
+    
     return (n, l)
