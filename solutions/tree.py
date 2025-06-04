@@ -10,6 +10,9 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
     temp = []
     for edge in edge_list:
         temp += edge
+
+
+        
     for i in range(1, n + 1):
         if i not in set(temp):
             num += 1
@@ -37,8 +40,10 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
                 idx.append(j)
                 test = 0
 
+
         if test == 1:       # If there are no connections, append it to l
             l.append([e1, e2])
+
 
         if len(idx) > 1:    # If two sublists share an element, then merge them
             id_0 = idx[0]
@@ -47,9 +52,16 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
                 l[id_0] += l[id_k]
                 del l[id_k]
 
-    num += len(l) - 1
+
+
+    num += len(l) - 1       # Number of connections, not number of separate graphs
+
+
 
     return num
+
+
+
 
 
 def parseInput(file):
