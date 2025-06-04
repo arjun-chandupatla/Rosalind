@@ -39,9 +39,7 @@ def func(n, edge_list: list[list[int]]) -> int:
                 l[id0] += l[idk]
                 del l[idk]
 
-
     num += len(l) - 1
-
 
     return num
 
@@ -54,5 +52,4 @@ def parseInput(file):
     for i in range(1, len(lines)):
         line = lines[i].strip()
         l.append([int(j) for j in line.split()])
-    
     return (n, l)
