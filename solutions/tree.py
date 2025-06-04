@@ -2,8 +2,6 @@
 # return the minimum number of edges that can be added to this graph to make a tree
 
 
-
-
 def func(n, edge_list: list[list[int]]) -> int:
     num = 0
     temp = []
@@ -12,7 +10,6 @@ def func(n, edge_list: list[list[int]]) -> int:
     for i in range(1, n + 1):
         if i not in set(temp):
             num += 1
-    
 
     l = [edge_list[0]]
     for i in range(1, len(edge_list)):
@@ -49,12 +46,6 @@ def func(n, edge_list: list[list[int]]) -> int:
     return num
 
 
-
-
-
-
-
-
 def parseInput(file):
     lines = file.readlines()
     n = int(lines[0].strip())
@@ -65,5 +56,3 @@ def parseInput(file):
         l.append([int(j) for j in line.split()])
     
     return (n, l)
-
-
