@@ -4,19 +4,23 @@
 
 def countNumEdges(n, edge_list: list[list[int]]) -> int:
     num = 0     # Number of edges that need to be added
+    
+    # If a number is less than n but not in the adjacency list, then it is isolated
+    # and needs an edge to connect it to the rest of the tree
     temp = []
     for edge in edge_list:
         temp += edge
-    # If a number is less than n but not in the adjacency list, then it is isolated
-    # and needs an edge to connect it to create the tree
     for i in range(1, n + 1):
         if i not in set(temp):
             num += 1
 
+
+    # Essentially transitive closure
     l = [edge_list[0]]
+
     for i in range(1, len(edge_list)):
         [e1, e2] = edge_list[i]
-        test = 1
+        test = 1        # This is used to test if an item is connected, or needs an edge to connect it
         idx = []
 
         for j in range(len(l)):
