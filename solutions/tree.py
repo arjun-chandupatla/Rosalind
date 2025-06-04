@@ -26,6 +26,7 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
         for j in range(len(l)):
             item = l[j]
 
+            # Check if connections exist
             if e1 in item and e2 not in item:
                 item.append(e2)
                 idx.append(j)
@@ -36,8 +37,9 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
                 idx.append(j)
                 test = 0
 
-        if test == 1:
+        if test == 1:       # If there are no connections, append it to l
             l.append([e1, e2])
+
         if len(idx) > 1:
             id_0 = idx[0]
             for k in range(len(idx) - 1, 0, -1):
