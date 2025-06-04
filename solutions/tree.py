@@ -4,19 +4,16 @@
 
 def countNumEdges(n, edge_list: list[list[int]]) -> int:
     num = 0     # Number of edges that need to be added
-    
+
     # If a number is less than n but not in the adjacency list, then it is isolated
     # and needs an edge to connect it to the rest of the tree
     temp = []
     for edge in edge_list:
         temp += edge
 
-
-        
     for i in range(1, n + 1):
         if i not in set(temp):
             num += 1
-
 
     # Essentially transitive closure
     l = [edge_list[0]]
@@ -40,10 +37,8 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
                 idx.append(j)
                 test = 0
 
-
         if test == 1:       # If there are no connections, append it to l
             l.append([e1, e2])
-
 
         if len(idx) > 1:    # If two sublists share an element, then merge them
             id_0 = idx[0]
@@ -52,18 +47,12 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
                 l[id_0] += l[id_k]
                 del l[id_k]
 
-
-
-    num += len(l) - 1       # Number of connections, not number of separate graphs
-
-
-
+    num += len(l) - 1       # Number of connections, not the number of separate graphs
+    
     return num
 
 
-
-
-
+# Take input file and convert to an integer and a list of edges
 def parseInput(file):
     lines = file.readlines()
     n = int(lines[0].strip())
