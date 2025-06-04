@@ -29,7 +29,7 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
             # Check if connections exist
             if e1 in item and e2 not in item:
                 item.append(e2)
-                idx.append(j)
+                idx.append(j)   # idx used to check for further connections
                 test = 0
 
             elif e2 in item and e1 not in item:
@@ -40,7 +40,7 @@ def countNumEdges(n, edge_list: list[list[int]]) -> int:
         if test == 1:       # If there are no connections, append it to l
             l.append([e1, e2])
 
-        if len(idx) > 1:
+        if len(idx) > 1:    # If two sublists share an element, then merge them
             id_0 = idx[0]
             for k in range(len(idx) - 1, 0, -1):
                 id_k = idx[k]
