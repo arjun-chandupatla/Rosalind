@@ -32,3 +32,8 @@ def parseFasta(file):
     arr.append(temp)
     
     return arr[1:]
+
+
+
+def formatOutput(index_arr) -> str:
+    return " ".join(list(map(str, index_arr)))
