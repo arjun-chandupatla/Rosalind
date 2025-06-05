@@ -1,5 +1,6 @@
-# find the indices of a subsequence the subsequence doesn't have to occur contiguously
-# this reflects how motifs/genes aren't always contiguous, as well as the splicing process
+# Find the indices of a subsequence, but the subsequence doesn't have to occur contiguously
+# This reflects how motifs/genes aren't always contiguous, as well as the splicing process
+# If multiple subsequences exist, then return the indices of any of them
 
 
 def findIndices(dna: str, seq: str) -> list[int]:
