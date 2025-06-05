@@ -3,6 +3,7 @@
 # If multiple subsequences exist, then return the indices of any of them
 
 
+# This returns the indices of the very first subsequence
 def findIndices(dna: str, seq: str) -> list[int]:
     index_arr = [0]
     for base in seq:
