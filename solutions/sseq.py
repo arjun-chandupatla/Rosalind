@@ -11,7 +11,7 @@ def findIndices(dna: str, seq: str) -> list[int]:
     return index_arr[1:]
 
 
-def parseFasta(file):
+def parseInput(file):
     temp = ""
     arr  = []
     for line_s in file:
