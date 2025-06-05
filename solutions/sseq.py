@@ -10,6 +10,7 @@ def findIndices(dna: str, seq: str) -> list[int]:
         index_arr.append(dna.index(base, index_arr[-1]) + 1)
     return index_arr[1:]
 
+
 def parseFasta(file):
     temp = ""
     arr  = []
@@ -25,4 +26,4 @@ def parseFasta(file):
 
 
 def formatOutput(index_arr) -> str:
-    return " ".join(list(map(str, index_arr)))
+    return " ".join(list(map(str, index_arr)))    # Separate indices with spaces
