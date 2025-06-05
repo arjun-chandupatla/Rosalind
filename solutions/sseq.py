@@ -10,3 +10,25 @@ def findIndices(dna: str, seq: str) -> list[int]:
 
         
     return index_arr[1:]
+
+
+
+def parseFasta(file):
+    temp = ""
+    arr  = []
+
+    
+    for line_s in file:
+        line = line_s.strip()
+
+        
+        if line.startswith(">"):
+            arr.append(temp)
+            temp = ""
+        else:
+            temp += line
+    
+    
+    arr.append(temp)
+    
+    return arr[1:]
