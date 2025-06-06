@@ -20,3 +20,17 @@ def ratio(s1: str, s2: str) -> float:
             case _:
                 tv += 1
     return ts/tv
+
+
+def parseInput(file):
+    l = []
+    temp = ""
+    for line_s in file:
+        line = line_s.strip()
+        if line.startswith(">"):
+            l.append(temp)
+            temp = ""
+        else:
+            temp += line
+    l.append(temp)
+    return (l[1], l[2])     # l[0] = ''
