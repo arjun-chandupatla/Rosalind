@@ -33,4 +33,4 @@ def parseInput(file):
         else:
             temp += line
     l.append(temp)
-    return (l[1], l[2])     # l[0] = ''
+    return (l[1], l[2])
