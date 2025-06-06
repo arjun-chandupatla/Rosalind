@@ -1,6 +1,5 @@
 # Similar problem to 004_FIB, but rabbits die after m months
 # More accurate modeling of the rabbit population
-
 # Also uses dynamic programming
 
 def fibd(n, m):
