@@ -2,6 +2,9 @@
 # Both transitions and transversions are types of point mutations,
 # but transitions are purine-purine or pyrimidine-pyrimidine substitutions,
 # while transversions are purine-pyrimidine substitutions
+# This ratio can be used to identify coding regions, as it is higher in 
+# coding regions (exons) than noncoding regions (introns)
+
 
 def ratio(s1: str, s2: str) -> float:
     ts, tv = 0, 0        # ts is transitions, tv is transversions
