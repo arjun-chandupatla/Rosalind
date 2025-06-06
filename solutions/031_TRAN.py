@@ -4,7 +4,7 @@
 # while transversions are purine-pyrimidine substitutions
 
 def ratio(s1: str, s2: str) -> float:
-    ts, tv = 0, 0
+    ts, tv = 0, 0        # ts is transitions, tv is transversions
     for i in range(len(s1)):
         b1, b2 = s1[i], s2[i]
         if b1 == b2:
