@@ -1,12 +1,11 @@
 # random string matching
 
 import numpy as np
+
 def getProb(n: int, gc: float, motif: str):
     AT, GC = 0, 0     
     for base in motif:
-        if base == "A":
-            AT += 1
-        elif base == "T":
+        if base == "A" or base == "T":
             AT += 1
         elif base == "C":
             GC += 1
