@@ -1,4 +1,4 @@
-# random string matching
+# Determine the probability that a certain motif would occur in a random genome
 
 def getProb(n: int, gc: float, motif: str):
     AT, GC = 0, 0     
