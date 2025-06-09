@@ -1,4 +1,4 @@
-# Create a consensus array
+# Create a consensus string
 
 from numpy import transpose
 
