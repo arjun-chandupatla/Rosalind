@@ -1,4 +1,6 @@
 # Create a consensus array
+
+
 def profile(motifs):
     tMotifs = []
     for column in transpose(motifs):
