@@ -55,3 +55,24 @@ def formatOutput(cons: str, prof: list[list[int]]) -> str:
             temp.append(str(i))
         s += " ".join(temp)
     return s
+
+
+
+
+def parseInput(file):
+    d = list()
+    temp = ""
+    for line_s in file:
+        line = line_s.strip()
+        if line.isspace():
+            continue
+        elif line.startswith(">"):
+            if len(temp) == 0:
+                pass
+            else:
+                d.append(temp)
+                temp = ""
+        else:
+            temp += line.strip()
+    d.append(temp)
+    return d
