@@ -1,5 +1,8 @@
 # Create a consensus array
 
+from numpy import transpose
+
+
 
 def profile(motifs):
     tMotifs = []
