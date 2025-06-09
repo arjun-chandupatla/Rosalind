@@ -15,4 +15,5 @@ def getProb(N: int, gc: float, motif: str):
                 GC += 1
     # Find the probability of the motif not occurring in one random strand
     p = ((0.5 * gc)**GC) * ((0.5 * (1 - gc))**AT)
+    # Find the complement over N randomly generated strands
     return 1 - (1-p)**N
