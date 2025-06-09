@@ -13,5 +13,6 @@ def getProb(N: int, gc: float, motif: str):
                 AT += 1
             case "G" | "C":
                 GC += 1
+    # Find the probability of the motif not occurring in one random strand
     p = ((0.5 * gc)**GC) * ((0.5 * (1 - gc))**AT)
     return 1 - (1-p)**N
