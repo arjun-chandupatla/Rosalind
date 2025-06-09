@@ -1,4 +1,4 @@
-# Given a set of motifs, find the consensus string
+# Given a set of motifs, create a consensus motif
 
 from numpy import transpose
 
