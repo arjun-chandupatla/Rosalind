@@ -21,3 +21,21 @@ def profile(motifs):
             elif r[i] == "T":
                 T[i] += 1
     return [A, C, G, T]
+
+
+
+def consensus(profile_arr):
+    cons = ""
+    prof = transpose(profile_arr)
+    for i in prof:
+        m = list(i).index(max(i))
+        match m:
+            case 0:
+                cons += "A"
+            case 1:
+                cons += "C"
+            case 2:
+                cons += "G"
+            case 3:
+                cons += "T"
+    return cons
