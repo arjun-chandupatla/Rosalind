@@ -2,6 +2,8 @@
 
 from numpy import transpose
 
+
+# Creates a profile array from the motifs
 def profile(motifs):
     tMotifs = []
     for column in transpose(motifs):
@@ -22,6 +24,7 @@ def profile(motifs):
             elif r[i] == "T":
                 T[i] += 1
     return [A, C, G, T]
+
 
 
 def consensus(profile_arr):
