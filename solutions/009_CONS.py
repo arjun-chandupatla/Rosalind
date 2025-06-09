@@ -2,8 +2,6 @@
 
 from numpy import transpose
 
-
-
 def profile(motifs):
     tMotifs = []
     for column in transpose(motifs):
@@ -26,7 +24,6 @@ def profile(motifs):
     return [A, C, G, T]
 
 
-
 def consensus(profile_arr):
     cons = ""
     prof = transpose(profile_arr)
@@ -44,8 +41,6 @@ def consensus(profile_arr):
     return cons
 
 
-
-
 def formatOutput(cons: str, prof: list[list[int]]) -> str:
     s = ""
     s += cons
@@ -58,8 +53,6 @@ def formatOutput(cons: str, prof: list[list[int]]) -> str:
             temp.append(str(i))
         s += " ".join(temp)
     return s
-
-
 
 
 def parseInput(file):
