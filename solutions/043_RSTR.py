@@ -1,5 +1,6 @@
 # Determine the probability that a certain motif would occur in a random genome
-
+# It is simpler to find the probability that the motif wouldn't occur, and then
+# find the complement of that probability
 def getProb(n: int, gc: float, motif: str):
     AT, GC = 0, 0     
     for base in motif:
