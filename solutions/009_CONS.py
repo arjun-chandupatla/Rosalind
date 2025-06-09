@@ -39,3 +39,19 @@ def consensus(profile_arr):
             case 3:
                 cons += "T"
     return cons
+
+
+
+
+def formatOutput(cons: str, prof: list[list[int]]) -> str:
+    s = ""
+    s += cons
+    nuc = "ACGT"
+    for r in range(4):
+        temp = []
+        s += "\n"
+        s += nuc[r] + ": "
+        for i in prof[r]:
+            temp.append(str(i))
+        s += " ".join(temp)
+    return s
