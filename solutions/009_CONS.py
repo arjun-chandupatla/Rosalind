@@ -61,6 +61,7 @@ def formatOutput(cons: str, prof: list[list[int]]) -> str:
     return s
 
 
+# Parses the input, provided in FASTA format
 def parseInput(file):
     d = list()
     temp = ""
