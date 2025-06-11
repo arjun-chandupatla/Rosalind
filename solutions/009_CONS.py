@@ -46,6 +46,7 @@ def consensus(profile_arr):
     return cons
 
 
+# Formats the output for Rosalind
 def formatOutput(cons: str, prof: list[list[int]]) -> str:
     s = ""
     s += cons
