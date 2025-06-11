@@ -5,6 +5,7 @@ from numpy import transpose
 
 # Creates a profile array from the motifs
 # A profile array is an array that keeps track of how many times each base occurs in each position
+# The most probable bases in each position can be combined to create the consensus strand
 def profile(motifs):
     tMotifs = []
     for column in transpose(motifs):
