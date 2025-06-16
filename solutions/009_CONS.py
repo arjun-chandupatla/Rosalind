@@ -1,4 +1,4 @@
-# Given a set of motifs, create a consensus motif
+# Given a set of motifs, create a consensus motif using a profile array
 
 from numpy import transpose
 
