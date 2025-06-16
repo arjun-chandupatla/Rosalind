@@ -28,7 +28,7 @@ def profile(motifs):
     return [A, C, G, T]
 
 
-# Actually constructs the consensus strand from the profile array generated earlier
+#  Constructs the consensus strand from the profile array generated earlier
 def consensus(profile_arr):
     cons = ""
     prof = transpose(profile_arr)
