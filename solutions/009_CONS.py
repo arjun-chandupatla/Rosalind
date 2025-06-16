@@ -48,8 +48,7 @@ def consensus(profile_arr):
 
 # Formats the output for the Rosalind grader
 def formatOutput(cons: str, prof: list[list[int]]) -> str:
-    s = ""
-    s += cons
+    s = cons
     nuc = "ACGT"
     for r in range(4):
         temp = []
