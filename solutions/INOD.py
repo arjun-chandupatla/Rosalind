@@ -8,4 +8,4 @@ The number of internal nodes of an unrooted binary tree is the number of edges m
 '''
 
 def edges(n: int) -> int:
-  return n-2
+  return n - 2
