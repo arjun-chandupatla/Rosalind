@@ -6,3 +6,6 @@ In other words, there is one and only one path that connects any two edges in a 
 
 The number of internal nodes of an unrooted binary tree is the number of edges minus 2
 '''
+
+def edges(n: int) -> int:
+  return n-2
