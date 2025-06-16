@@ -28,7 +28,7 @@ def profile(motifs):
     return [A, C, G, T]
 
 
-#  Constructs the consensus strand from the profile array generated earlier
+# Constructs the consensus strand from the profile array generated earlier
 def consensus(profile_arr):
     cons = ""
     prof = transpose(profile_arr)
@@ -46,7 +46,7 @@ def consensus(profile_arr):
     return cons
 
 
-# Formats the output for Rosalind
+# Formats the output for the Rosalind grader
 def formatOutput(cons: str, prof: list[list[int]]) -> str:
     s = ""
     s += cons
