@@ -7,7 +7,7 @@ def subsets(n: int) -> int:
     num = 1
     for i in range(1, n + 1):
         num *= 2
-        if num > 1000000:
+        if num > 1000000:        # If the remainder is at any point 0, then the answer is 0
             num %= 1000000
         elif num == 1000000:
             return 0
