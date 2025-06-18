@@ -1,6 +1,6 @@
 # Given a list of strings, return the one with the highest GC content
 
-def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)): # type: ignore
+def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)):
     gc_dict = dict()
     for k in dna_dict.keys():
         dna = dna_dict[k]
