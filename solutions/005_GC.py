@@ -6,8 +6,9 @@ def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)):
         dna = dna_dict[k]
         gc = 0
         for base in dna:
-            if base == "G" or base == "C":
-                gc += 1
+            match base:
+                case "G" | "C":
+                    gc += 1
         gc_dict[k] = float(gc)/len(dna) * 100
     
     max_gc = max(gc_dict.values())
