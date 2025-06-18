@@ -1,3 +1,5 @@
+# Takes the reverse complement of a DNA strand
+
 def reverse_complement(path: str) -> str:
     f = open(path, "r")
     template = f.read()
