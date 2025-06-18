@@ -5,8 +5,8 @@ def gc_content(dna_dict: dict[str: str]) -> tuple((str, float)): # type: ignore
     for k in dna_dict.keys():
         dna = dna_dict[k]
         gc = 0
-        for base in dna.lower():
-            if base == "g" or base == "c":
+        for base in dna:
+            if base == "G" or base == "C":
                 gc += 1
         gc_dict[k] = float(gc)/len(dna) * 100
     
