@@ -1,3 +1,5 @@
+# Iteratively generates the nth Fibonacci number
+
 def fib(n: int, k: int) -> int:
     numPairs = [1, 1]
     for i in range(2, n):
