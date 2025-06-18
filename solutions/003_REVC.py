@@ -1,10 +1,7 @@
 # Takes the reverse complement of a DNA strand
 # This is the sequence of the complementary strand read 5' to 3'
 
-def reverse_complement(path: str) -> str:
-    f = open(path, "r")
-    template = f.read()
-    f.close()
+def reverse_complement(template: str) -> str:
     rc = ""
     for base in template:
         match base:
