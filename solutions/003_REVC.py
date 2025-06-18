@@ -1,4 +1,4 @@
-# Takes the reverse complement of a DNA strand
+# Takes the reverse complement of a template DNA strand
 # This is the sequence of the complementary strand read 5' to 3'
 
 def reverse_complement(template: str) -> str:
