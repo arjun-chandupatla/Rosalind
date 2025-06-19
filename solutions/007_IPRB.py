@@ -3,7 +3,7 @@
 
 
 # Finds the probability of dominant offspring from two organisms
-# in a population with k homozygous dominant, m homozygous recessibe, and n heterozygous
+# in a population with k homozygous dominant, m heterozygous, and n homozygous recessive
 def dominant(k: int, m: int, n: int) -> float:
     Pr1 = lambda x: x/float(k+m+n)
     Pr2 = lambda x: x/float(k+m+n-1)
