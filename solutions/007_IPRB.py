@@ -2,7 +2,7 @@
 # Deals with probabilities
 
 
-# Finds the probability of dominant offspring
+# Finds the probability of dominant offspring from two organisms
 def dominant(k: int, m: int, n: int) -> float:
     Pr1 = lambda x: x/float(k+m+n)
     Pr2 = lambda x: x/float(k+m+n-1)
