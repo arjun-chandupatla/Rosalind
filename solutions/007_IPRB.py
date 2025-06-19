@@ -1,6 +1,8 @@
 # Mendel's First Law of genetics
 # Deals with probabilities
 
+
+# Finds the probability of dominant offspring
 def dominant(k: int, m: int, n: int) -> float:
     Pr1 = lambda x: x/float(k+m+n)
     Pr2 = lambda x: x/float(k+m+n-1)
