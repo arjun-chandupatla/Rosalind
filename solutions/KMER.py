@@ -1,1 +1,1 @@
-# Find the 4-mer composition of a dna string s
+# Given a DNA string s, find the 4-mer composition of s
