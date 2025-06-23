@@ -6,7 +6,7 @@
 
 
 
-
+# Generate all possible 4-mers
 def getKmers():
     temp = list(itertools.product(["A", "C", "G", "T"], repeat=4))
     kmers = [""] * len(temp)
