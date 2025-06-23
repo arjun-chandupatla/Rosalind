@@ -16,8 +16,7 @@ def getKmers(k: int):
 
 
 # Find kmer composition of a string
-def composition(dna: str) -> list[int]:
-    kmers = getKmers()
+def composition(dna: str, kmers: list[str) -> list[int]:
     kmer_map = dict()
     comp = [0] * len(kmers)
     for i in range(len(kmers)):
