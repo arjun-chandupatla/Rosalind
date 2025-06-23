@@ -13,3 +13,18 @@ def getKmers(k: int):
     for i in range(len(temp)):
         kmers[i] = "".join(temp[i])
     return kmers
+
+
+# Find kmer composition of a string
+def composition(dna: str) -> list[int]:
+    kmers = getKmers()
+    kmer_map = dict()
+    comp = [0] * len(kmers)
+    for i in range(len(kmers)):
+        kmer_map[kmers[i]] = i
+        print(kmer_map)
+    for j in range(len(dna) - 3):
+        kmer = dna[j:j+4]
+        idx = kmer_map[kmer]
+        comp[idx] += 1
+    return comp
