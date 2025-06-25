@@ -4,11 +4,11 @@
 # The kmer composition of a string is the number of times each possible kmer 
 # appears in it in order alphabetically
 
-import itertools
+from itertools import product
 
 # Generate all possible kmers
 def getKmers(k: int):
-    temp = list(itertools.product(["A", "C", "G", "T"], repeat=k))
+    temp = list(product(["A", "C", "G", "T"], repeat=k))
     kmers = [""] * len(temp)
     for i in range(len(temp)):
         kmers[i] = "".join(temp[i])
