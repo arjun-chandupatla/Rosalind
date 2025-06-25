@@ -31,5 +31,5 @@ def composition(dna: str, kmers: list[str]) -> list[int]:
 
 # Turn the file provided into a text string
 def parseInput(file):
-    dna = "".join(line.strip() for line in file.readlines())
+    dna = "".join([line.strip() for line in file.readlines()])
     return dna
