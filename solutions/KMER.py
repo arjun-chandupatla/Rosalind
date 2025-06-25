@@ -27,3 +27,6 @@ def composition(dna: str, kmers: list[str) -> list[int]:
         idx = kmer_map[kmer]
         comp[idx] += 1
     return comp
+
+
+def parseInput(file):
