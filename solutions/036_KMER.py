@@ -6,7 +6,7 @@
 
 from itertools import product
 
-# Generate all possible kmers
+# Generates all possible kmers
 def getKmers(k: int):
     temp = list(product(["A", "C", "G", "T"], repeat=k))
     kmers = [""] * len(temp)
@@ -15,7 +15,7 @@ def getKmers(k: int):
     return kmers
 
 
-# Find kmer composition of a string
+# Finds kmer composition of a string
 def composition(dna: str, kmers: list[str]) -> list[int]:
     kmer_map = dict()
     comp = [0] * len(kmers)
