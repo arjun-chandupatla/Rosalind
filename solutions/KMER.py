@@ -29,6 +29,6 @@ def composition(dna: str, kmers: list[str]) -> list[int]:
     return comp
 
 
-# Parse the input file and return the DNA string it contains
+# Parses the input file and returns a DNA string
 def parseInput(file):
     return "".join([line.strip() for line in file.readlines()])
