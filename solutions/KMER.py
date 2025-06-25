@@ -29,4 +29,5 @@ def composition(dna: str, kmers: list[str) -> list[int]:
     return comp
 
 
+# Turn the file provided into a text string
 def parseInput(file):
