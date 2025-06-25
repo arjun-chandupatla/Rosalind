@@ -15,7 +15,7 @@ def getKmers(k: int):
     return kmers
 
 
-# Finds kmer composition of a string
+# Finds the kmer composition of a string
 def composition(dna: str, kmers: list[str]) -> list[int]:
     kmer_map = dict()
     comp = [0] * len(kmers)
@@ -29,6 +29,11 @@ def composition(dna: str, kmers: list[str]) -> list[int]:
     return comp
 
 
-# Parses the input file and returns a DNA string
+# Parses the input file and returns k followed by the DNA string
 def parseInput(file):
-    return "".join([line.strip() for line in file.readlines()])
+    return (4, "".join([line.strip() for line in file.readlines()]))
+
+
+# Formats the composition array as a space-separated string
+def formatOutput(comp: list[int]) -> str:
+    return " ".join(comp)
