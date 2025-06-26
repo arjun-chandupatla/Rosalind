@@ -14,15 +14,13 @@ def LCS(s1: str, s2: str):
             else:
                 arr[i][j] = max(arr[i-1][j], arr[i][j-1])
     lcs = ""
-    i = m
-    j = n
     while i > 0 and j > 0:
         if match(s1, s2, i, j):
             lcs += s1[i-1]
-            i -= 1
-            j -= 1
+            m -= 1
+            n -= 1
         elif arr[i-1][j] > arr[i][j-1]:
-            i -= 1
+            m -= 1
         else:
-            j -= 1
+            n -= 1
     return lcs[::-1]
