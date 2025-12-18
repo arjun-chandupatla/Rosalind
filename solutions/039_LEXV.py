@@ -1,5 +1,4 @@
-import itertools
-
+from itertools import product
 
 # List all possible permutations of the alphabet provided
 def enumeratePerms(alph: list[str], n: int) -> list[str]:
