@@ -45,11 +45,13 @@ def getPerms(alph: list[str], n: int) -> list[str]:
     return perms
         
 
+# Parse the input txt file from Rosalind
 def parseInput(file):
     text = file.read()
     return (text.split()[:-1], int(text.split()[-1]))
 
 
+# Format the output for the Rosalind autograder
 def formatOutput(perms: list[str]) -> str:
     return "\n".join(perms)
 
