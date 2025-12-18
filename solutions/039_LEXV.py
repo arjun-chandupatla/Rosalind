@@ -27,7 +27,7 @@ def sortPerms(perms, alph, n):
         if (len(temp) < n):
             temp += (n - len(temp)) * "0"
         nperms.append(temp)
-    nperms.sort()
+    nperms.sort()    # Uses Python's list.sort() to sort the numerical list
 
     sorted = list()
 
