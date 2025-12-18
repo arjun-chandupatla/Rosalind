@@ -13,7 +13,8 @@ def sortPerms(perms, alph, n):
     map = dict()
     map["0"] = ""
 
-    # Converts each string to a sequence of numbers
+    # Converts each string to a sequence of (hexadecimal) numbers
+    # to allow for the list to be sorted
     for i in range(len(alph)):
         map[alph[i]] = hex(i+1)[2:]
         map[hex(i+1)[2:]] = alph[i]
