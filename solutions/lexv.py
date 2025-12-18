@@ -1,4 +1,3 @@
-
 import itertools
 
 def enumeratePerms(alph: list[str], n: int) -> list[str]:
@@ -8,7 +7,7 @@ def enumeratePerms(alph: list[str], n: int) -> list[str]:
     return perms
 
 
-def asdfasdf(perms, alph, n):
+def sortPerms(perms, alph, n):
     map = dict()
     map["0"] = ""
 
@@ -39,11 +38,9 @@ def asdfasdf(perms, alph, n):
 
 def getPerms(alph: list[str], n: int) -> list[str]:
     perms = enumeratePerms(alph, n)
-    perms = asdfasdf(perms, alph, n)
+    perms = sortPerms(perms, alph, n)
     return perms
-    
-
-    
+        
 
 def parseInput(file):
     text = file.read()
@@ -60,10 +57,7 @@ if __name__ == "__main__":
     alph, n = parseInput(i)
     i.close()
 
-    perms = enumeratePerms(alph, n)
-    s = asdfasdf(perms, alph, n)
-
-    ans = formatOutput(s)
+    ans = getPerms(alph, n)
 
     o = open("output.txt", "w")
     o.write(ans)
