@@ -9,6 +9,7 @@ def enumeratePerms(alph: list[str], n: int) -> list[str]:
     return perms
 
 
+# sort the permutations list
 def sortPerms(perms, alph, n):
     map = dict()
     map["0"] = ""
