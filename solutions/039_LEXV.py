@@ -1,7 +1,7 @@
 import itertools
 
 
-# list all possible permutations of the alphabet provided
+# List all possible permutations of the alphabet provided
 def enumeratePerms(alph: list[str], n: int) -> list[str]:
     perms = []
     for i in range(1, n + 1):
@@ -9,7 +9,7 @@ def enumeratePerms(alph: list[str], n: int) -> list[str]:
     return perms
 
 
-# sort the permutations list
+# Sort the permutations list lexicographically
 def sortPerms(perms, alph, n):
     map = dict()
     map["0"] = ""
