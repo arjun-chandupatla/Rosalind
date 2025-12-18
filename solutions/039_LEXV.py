@@ -39,6 +39,7 @@ def sortPerms(perms, alph, n):
     return sorted
 
 
+# One single function to both enumerate and return the sorted list of permutations
 def getPerms(alph: list[str], n: int) -> list[str]:
     perms = enumeratePerms(alph, n)
     perms = sortPerms(perms, alph, n)
