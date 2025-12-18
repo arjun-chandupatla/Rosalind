@@ -4,7 +4,7 @@ from itertools import product
 def enumeratePerms(alph: list[str], n: int) -> list[str]:
     perms = []
     for i in range(1, n + 1):
-        perms += list("".join(tup) for tup in itertools.product(alph, repeat=i))
+        perms += list("".join(tup) for tup in product(alph, repeat=i))
     return perms
 
 
