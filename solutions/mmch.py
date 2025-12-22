@@ -1,6 +1,5 @@
-from math import perm
-
 # Given an RNA strand where A != U and G != C, find the number of maximum matchings
+from math import perm
 
 # Find the number of maximum matchings
 def maximumMatchings(rna: str) -> int:
