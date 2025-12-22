@@ -1,4 +1,5 @@
-# given an rna strand, find the number of maximum matchings
+# Given an RNA strand where A != U and G != C, find the number of maximum matchings
+# This problem is related to RNA's physical structure
 
 # Find the number of maximum matchings
 def maximumMatchings(rna: str) -> int:
