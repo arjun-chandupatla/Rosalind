@@ -1,5 +1,4 @@
-from math import factorial as f
-from math import perms
+from math import perm
 
 # Given an RNA strand where A != U and G != C, find the number of maximum matchings
 
