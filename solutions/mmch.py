@@ -27,3 +27,17 @@ def parseInput(file):
     print(text)
     return ("GUCGGGAAGUGUUGCACUUGUACCAUUAUCUGAUCCCAUCCCCUCAACUUCAUAGUGCGACCUCACAGACGUGCAGAUUCCAGUCCCUUCGA")
 
+
+
+
+if __name__ == "__main__":
+    i = open("input.txt", "r")
+    rna = parseInput(i)
+    i.close()
+
+    num = maximumMatchings(rna)
+    print(num)
+
+    o = open("output.txt", "w")
+    o.write(str(num))
+    o.close()
