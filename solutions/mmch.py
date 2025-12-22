@@ -1,5 +1,4 @@
 # Given an RNA strand where A != U and G != C, find the number of maximum matchings
-# This problem is related to RNA's physical structure
 
 # Find the number of maximum matchings
 def maximumMatchings(rna: str) -> int:
@@ -20,24 +19,3 @@ def maximumMatchings(rna: str) -> int:
     auMatchings = perm(max(a, u), min(a, u))
     gcMatchings = perm(max(g, c), min(g, c))
     return auMatchings*gcMatchings
-
-
-def parseInput(file):
-    text = file.read()
-    print(text)
-    return ("GUCGGGAAGUGUUGCACUUGUACCAUUAUCUGAUCCCAUCCCCUCAACUUCAUAGUGCGACCUCACAGACGUGCAGAUUCCAGUCCCUUCGA")
-
-
-
-
-if __name__ == "__main__":
-    i = open("input.txt", "r")
-    rna = parseInput(i)
-    i.close()
-
-    num = maximumMatchings(rna)
-    print(num)
-
-    o = open("output.txt", "w")
-    o.write(str(num))
-    o.close()
