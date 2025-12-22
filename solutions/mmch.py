@@ -1,7 +1,6 @@
 # given an rna strand, find the number of maximum matchings
 
-
-
+# Find the number of maximum matchings
 def maximumMatchings(rna: str) -> int:
     a = 0
     c = 0
