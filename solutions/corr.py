@@ -68,3 +68,23 @@ def parseInput(inp: list[str]):
     for i in range(1, len(inp), 2):
         temp.append(inp[i].strip())
     return temp
+
+
+
+
+if __name__ == "__main__":
+    f = open("input.txt", "r")
+    l = []
+    for line in f:
+        l.append(line)
+    f.close()
+
+    lines = parseInput(l)
+
+    cor = correctList(lines)
+    map = errors(lines, cor)
+    ans = formatOutput(map)
+
+    g = open("output.txt", "w")
+    g.write(ans)
+    g.close()
