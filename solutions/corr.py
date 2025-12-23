@@ -23,3 +23,8 @@ def hd(p: str, q: str) -> int:
             dist += 1
     return dist
 
+
+
+def dist(p: str, q: str) -> int:
+    return min(hd(p, q), hd(rc(p), q), hd(p, rc(q)), hd(rc(p), rc(q)))
+
