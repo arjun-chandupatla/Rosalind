@@ -28,3 +28,15 @@ def hd(p: str, q: str) -> int:
 def dist(p: str, q: str) -> int:
     return min(hd(p, q), hd(rc(p), q), hd(p, rc(q)), hd(rc(p), rc(q)))
 
+
+def correctList(reads: list[str]):
+    correct = []
+    for i in range(len(reads)):
+        r = reads[i]
+        if r not in correct:
+            if r in reads[i+1:] or rc(r) in reads[i+1:]:
+                correct.append(r)
+                #correct.append(rc(r))
+        elif rc(r) in correct:
+            correct.append(r)
+    return correct
