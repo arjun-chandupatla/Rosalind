@@ -53,3 +53,18 @@ def errors(reads: list[str], correct: list[str]):
                 elif hd(r, rc(correct[k])) == 1:
                     map[r] = rc(correct[k])
     return map
+
+
+
+def formatOutput(map: dict[str, str]) -> str:
+    s = ""
+    for k in map.keys():
+        s += k + "->" + map[k] + "\n"
+    return s.rstrip()
+
+
+def parseInput(inp: list[str]):
+    temp = []
+    for i in range(1, len(inp), 2):
+        temp.append(inp[i].strip())
+    return temp
