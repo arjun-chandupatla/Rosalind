@@ -1,6 +1,6 @@
-#error correction in reads
+# Given a list of reads, return which ones have a single-nucleotide replacement mutation
 
-
+# Reverse complement
 def rc(dna: str) -> str:
     s = ""
     for base in dna:
@@ -16,6 +16,7 @@ def rc(dna: str) -> str:
     return s[::-1]
 
 
+# Hamming Distance
 def hd(p: str, q: str) -> int:
     dist = 0
     for i in range(len(p)):
@@ -24,11 +25,7 @@ def hd(p: str, q: str) -> int:
     return dist
 
 
-
-def dist(p: str, q: str) -> int:
-    return min(hd(p, q), hd(rc(p), q), hd(p, rc(q)), hd(rc(p), rc(q)))
-
-
+# Find all the correct reads (will appear >=2 times)
 def correctList(reads: list[str]):
     correct = []
     for i in range(len(reads)):
@@ -42,6 +39,7 @@ def correctList(reads: list[str]):
     return correct
 
 
+# Link the incorrect reads to their closest correct read
 def errors(reads: list[str], correct: list[str]):
     map = {}
     for j in range(len(reads)):
@@ -55,7 +53,7 @@ def errors(reads: list[str], correct: list[str]):
     return map
 
 
-
+# Format output for the Rosalind autograder
 def formatOutput(map: dict[str, str]) -> str:
     s = ""
     for k in map.keys():
@@ -63,13 +61,12 @@ def formatOutput(map: dict[str, str]) -> str:
     return s.rstrip()
 
 
+# Parse the input (FASTA format)
 def parseInput(inp: list[str]):
     temp = []
     for i in range(1, len(inp), 2):
         temp.append(inp[i].strip())
     return temp
-
-
 
 
 if __name__ == "__main__":
