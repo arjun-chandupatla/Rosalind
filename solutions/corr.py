@@ -40,3 +40,16 @@ def correctList(reads: list[str]):
         elif rc(r) in correct:
             correct.append(r)
     return correct
+
+
+def errors(reads: list[str], correct: list[str]):
+    map = {}
+    for j in range(len(reads)):
+        r = reads[j]
+        if r not in correct or rc(r) not in correct:
+            for k in range(len(correct)):
+                if hd(r, correct[k]) == 1:
+                    map[r] = correct[k]
+                elif hd(r, rc(correct[k])) == 1:
+                    map[r] = rc(correct[k])
+    return map
